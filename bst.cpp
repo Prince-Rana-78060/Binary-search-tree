@@ -11,54 +11,6 @@ class node
 		node *left;
 		node *right;
 };
-class Queue
-{
-	node* a[30];
-	public:
-		int first,last;
-		Queue()
-		{
-			first=last=-1;
-		}
-		~Queue()
-		{  }
-		void enqueue(node *t)
-		{
-			if(first==-1)
-			{
-				first=last=0;
-				a[last++]=t;
-			}
-			else if(last==29)
-			{
-				cout<<"\n Queue full !!!";
-				exit(1);
-			}
-			else
-			{
-				a[last++]=t;
-			}
-		}
-
-		node* dequeue()
-		{
-			if(first==-1)
-			{
-				cout<<"\n Queue Empty !!!";
-			}
-			node *k;
-			if(first==last)
-			{
-				k=a[first];
-				first=last=-1;
-			}
-			else
-			{
-				k=a[first++];
-			}
-			return k;
-		}
-};
 
 class BST
 {
